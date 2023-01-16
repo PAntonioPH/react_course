@@ -6,10 +6,10 @@ const arreglo = [1, 2, 3, 4]
 // arreglo.push(4)
 // arreglo.push(5)
 
-let arreglo_2 = [...arreglo, 5]
+let arreglo2 = [...arreglo, 5]
 
-const arreglo_3 = arreglo_2.map((number) => number * 2)
+const arreglo3 = arreglo2.map((number) => number * 2)
 
 console.log(arreglo);
-console.log(arreglo_2);
-console.log(arreglo_3);
+console.log(arreglo2);
+console.log(arreglo3);

@@ -1,14 +1,14 @@
-const nombre = 'Antonio'
-const apellido = 'Perez'
+const nombre = "Antonio"
+const apellido = "Perez"
 
-// const nombre_completo = nombre + ' ' + apellido
-const nombre_completo = `${nombre} ${apellido}
+// const nombre_completo = nombre + " " + apellido
+const nombreCompleto = `${nombre} ${apellido}
   ${1 + 1}`
 
-console.log(nombre_completo);
+console.log(nombreCompleto);
 
-const get_saludo = (nombre) => {
+const getSaludo = (nombre) => {
   return `Hola mundo ${nombre}`
 }
 
-console.log(`Esto es un texto: ${get_saludo(nombre)}`)
+console.log(`Esto es un texto: ${getSaludo(nombre)}`)

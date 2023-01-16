@@ -2,31 +2,32 @@ const saludar = function (nombre) {
   return `Hola, ${nombre}`
 }
 
-const saludar_2 = (nombre) => {
+const saludar2 = (nombre) => {
   return `Hola, ${nombre}`
 }
 
-const saludar_3 = (nombre) => `Hola, ${nombre}`
+const saludar3 = (nombre) => `Hola, ${nombre}`
 
-const saludar_4 = () => `Hola mundo`
+const saludar4 = () => `Hola mundo`
 
-console.log(saludar('Antonio'));
-console.log(saludar_2('Pablo'));
-console.log(saludar_3('David'));
-console.log(saludar_4('David'));
+console.log(saludar("Antonio"));
+console.log(saludar2("Pablo"));
+console.log(saludar3("David"));
+console.log(saludar4("David"));
 
-const get_user = () => ({
-  uid: 'ABC123',
-  user_name: 'Admin'
+const getUser = () => ({
+  uid: "ABC123",
+  userName: "Admin"
 })
 
-const user = get_user()
+const user = getUser()
 console.log(user);
 
-const get_user_activo = (nombre) => ({
-  uid: 'ABC123',
-  user_name: nombre
+const getUserActivo = (nombre) => ({
+  uid: "ABC123",
+  userName: nombre
 })
 
-const usuario_activo = get_user_activo('Fernando')
-console.log(usuario_activo);
+const usuarioActivo = getUserActivo("Fernando")
+
+console.log(usuarioActivo);
