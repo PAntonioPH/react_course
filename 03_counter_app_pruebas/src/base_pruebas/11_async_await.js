@@ -1,7 +1,4 @@
-const getImgPromesa = () => new Promise((resolve, reject) => resolve("https://www.google.com"))
-getImgPromesa().then((console.log))
-
-const getImg = async () => {
+export const getImgKey = async () => {
   try {
     const apiKey = "DUeRvUV7LBUbA48oAm6evGiFsmmi7LLB"
     const res = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`)
@@ -9,12 +6,24 @@ const getImg = async () => {
 
     const {url} = data.images.original
 
-    const img = document.createElement("img")
-    img.src = url
-    document.body.append(img)
+    return url
   } catch (err) {
-    console.error(err)
+    // console.error(err)
+    return "No se encontró la imagen"
   }
 }
 
-getImg()
+export const getImg = async () => {
+  try {
+    const apiKey = ""
+    const res = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`)
+    const {data} = await res.json()
+
+    const {url} = data.images.original
+
+    return url
+  } catch (err) {
+    // console.error(err)
+    return "No se encontró la imagen"
+  }
+}
