@@ -11,3 +11,5 @@
 
 03_counter_app_pruebas/.idea
 03_counter_app_pruebas/node_modules
+03_counter_app_pruebas/yarn-error.log
+03_counter_app_pruebas/test/__snapshots__
