@@ -4,7 +4,7 @@ export const FirstApp = ({title, subTitle, name}) => {
 
   return (
     <>
-      <div data-testid={"testTitle"}>{title}</div>
+      <h1 data-testid={"testTitle"}>{title}</h1>
       <p>{subTitle}</p>
       <p>{subTitle}</p>
       <p>{name}</p>
