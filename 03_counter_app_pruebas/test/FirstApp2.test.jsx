@@ -3,6 +3,7 @@ import {FirstApp} from "../src/FirstApp.jsx";
 
 describe("Pruebas en FirstApp", () => {
   const testTitle = "Hola mundo"
+  const testSubTitle = "Subtitulo"
 
   test("Debe de hacer match con el snapshot", () => {
     const {container} = render(<FirstApp title={testTitle}/>)
@@ -22,5 +23,11 @@ describe("Pruebas en FirstApp", () => {
     render(<FirstApp title={testTitle}/>)
 
     expect(screen.getByRole("heading", {level: 1}).innerHTML).toBe(testTitle)
+  })
+
+  test("Debe de mostrar el subtitulo enviado por las props", () => {
+    render(<FirstApp title={testTitle} subTitle={testSubTitle}/>)
+
+    expect(screen.getAllByText(testSubTitle)).toHaveLength(2)
   })
 })
