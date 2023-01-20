@@ -13,3 +13,6 @@
 03_counter_app_pruebas/node_modules
 03_counter_app_pruebas/yarn-error.log
 03_counter_app_pruebas/test/__snapshots__
+
+04_gift_expert_app/.idea
+04_gift_expert_app/node_modules
