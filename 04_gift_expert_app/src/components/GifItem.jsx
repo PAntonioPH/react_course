@@ -1,4 +1,4 @@
-export const GifGridItem = ({title, url}) => {
+export const GifItem = ({title, url}) => {
 
   return (
     <div className={"card"}>
