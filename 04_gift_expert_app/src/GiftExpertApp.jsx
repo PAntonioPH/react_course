@@ -3,7 +3,7 @@ import {AddCategory} from "./components/AddCategory.jsx";
 import {GifGrid} from "./components/GifGrid.jsx";
 
 export const GiftExpertApp = () => {
-  const [categories, setCategories] = useState(["One Punch"])
+  const [categories, setCategories] = useState([""])
 
   const onAddCategory = (newCategory) => {
     if (categories.includes(newCategory)) return
