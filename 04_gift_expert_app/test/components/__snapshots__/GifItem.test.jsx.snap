@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas de GifItem De de hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <p>
+      Naruto
+    </p>
+    <img
+      alt="Naruto"
+      src="https://media3.giphy.com/media/naruto"
+    />
+  </div>
+</div>
+`;
