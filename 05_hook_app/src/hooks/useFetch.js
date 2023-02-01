@@ -4,7 +4,7 @@ export const useFetch = (url) => {
   const [state, setState] = useState({
     data: null,
     isLoading: true,
-    hasError: null,
+    hasError: false,
   })
 
   const getFetch = async () => {
@@ -13,20 +13,30 @@ export const useFetch = (url) => {
       isLoading: true
     })
 
-    const res = await fetch(url)
-    const data = await res.json()
+    try {
+      const res = await fetch(url)
+      const data = await res.json()
 
-    console.log(data);
-
-    setState({
-      data,
-      isLoading: false,
-      hasError: null,
-    })
+      setState({
+        data,
+        isLoading: false,
+        hasError: false,
+      })
+    } catch (e) {
+      setState({
+        ...state,
+        hasError: true
+      })
+    }
   }
 
   useEffect(() => {
-    getFetch()
+    getFetch().catch(() => {
+      setState({
+        ...state,
+        hasError: true
+      })
+    })
   }, [url])
 
   return {
