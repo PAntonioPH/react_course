@@ -33,7 +33,7 @@ export const SimpleForm = () => {
       <h1>Formulario Simple</h1>
       <hr/>
       <input
-        type="text"
+        type={"text"}
         className={"form-control"}
         placeholder={"Username"}
         name={"username"}
@@ -42,7 +42,7 @@ export const SimpleForm = () => {
       />
 
       <input
-        type="email"
+        type={"email"}
         className={"form-control mt-2"}
         placeholder={"Email"}
         name={"email"}
