@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './styles.css'
+import './index.css'
 import {MultipleCustomHooks} from "./03_examples/MultipleCustomHooks.jsx";
 // import {SimpleForm} from "./02_useEffect/SimpleForm.jsx";
 // import {SimpleFormCustomHook} from "./02_useEffect/SimpleFormCustomHook.jsx";
