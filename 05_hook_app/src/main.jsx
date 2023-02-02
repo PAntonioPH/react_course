@@ -6,7 +6,8 @@ import './index.css'
 // import {Layout} from "./05_useLayoutEffect/Layout.jsx";
 // import {Memorize} from "./06_memos/Memorize.jsx";
 // import {MemoHook} from "./06_memos/MemoHook.jsx";
-import {CallbackHook} from "./06_memos/CallbackHook.jsx";
+// import {CallbackHook} from "./06_memos/CallbackHook.jsx";
+import {Padre} from "./07_tarea_memo/Padre.jsx";
 // import {SimpleForm} from "./02_useEffect/SimpleForm.jsx";
 // import {SimpleFormCustomHook} from "./02_useEffect/SimpleFormCustomHook.jsx";
 // import {HooksApp} from "./HooksApp.jsx";
@@ -15,6 +16,6 @@ import {CallbackHook} from "./06_memos/CallbackHook.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-  <CallbackHook/>
+  <Padre/>
   // </React.StrictMode>,
 )
