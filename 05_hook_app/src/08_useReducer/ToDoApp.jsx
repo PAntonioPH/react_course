@@ -1,24 +1,44 @@
-import {useReducer} from "react";
+import {useEffect, useReducer} from "react";
 import {ToDoAdd, ToDoList, toDoReducer} from "./index"
 
 const initialState = [
-  {
-    id: new Date().getTime(),
-    description: "Recolectar la piedra del alma",
-    done: false
-  },
-  {
-    id: new Date().getTime() + 100,
-    description: "Recolectar la piedra del tiempo",
-    done: false
-  },
+  // {
+  //   id: new Date().getTime(),
+  //   description: "Recolectar la piedra del alma",
+  //   done: false
+  // },
 ]
 
+const init = () => {
+  return JSON.parse(localStorage.getItem("toDos")) || []
+}
+
 export const ToDoApp = () => {
-  const [toDos, dispatch] = useReducer(toDoReducer, initialState)
+  const [toDos, dispatch] = useReducer(toDoReducer, initialState, init)
+
+  useEffect(() => {
+    localStorage.setItem("toDos", JSON.stringify(toDos))
+  }, [toDos])
 
   const handleNewToDo = (toDo) => {
-    console.log({toDo});
+    dispatch({
+      type: "Add ToDo",
+      payload: toDo
+    })
+  }
+
+  const handleDeleteToDo = (id) => {
+    dispatch({
+      type: "Remove toDo",
+      payload: id
+    })
+  }
+
+  const onToggleToDo = (id) => {
+    dispatch({
+      type: "Toggle toDo",
+      payload: id
+    })
   }
 
   return (
@@ -28,14 +48,20 @@ export const ToDoApp = () => {
 
       <div className={"row"}>
         <div className={"col-7"}>
-          <ToDoList toDos={toDos}/>
+          <ToDoList
+            toDos={toDos}
+            onDeleteToDo={handleDeleteToDo}
+            onToggleToDo={onToggleToDo}
+          />
         </div>
 
         <div className={"col-5"}>
           <h4>Agregar TODO</h4>
           <hr/>
 
-          <ToDoAdd handleNewToDo={handleNewToDo}/>
+          <ToDoAdd
+            onNewToDo={handleNewToDo}
+          />
         </div>
 
       </div>

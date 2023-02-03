@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
 import {useForm} from "../hooks/index.js";
 
-export const ToDoAdd = ({handleNewToDo}) => {
+export const ToDoAdd = ({onNewToDo}) => {
   const {onInputChange, onResetForm, description} = useForm({
     description: ""
   })
 
-  const onSubmit = (event) => {
+  const onFormSubmit = (event) => {
     event.preventDefault()
 
-    if (description.trim().length === 0) return
+    if (description.trim().length < 1) return
 
-    handleNewToDo({
+    onNewToDo({
       id: new Date().getTime(),
       description: description,
       done: false
@@ -21,7 +21,7 @@ export const ToDoAdd = ({handleNewToDo}) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onFormSubmit}>
       <input
         type={"text"}
         placeholder={"¿Qué hay que hacer?"}
@@ -42,5 +42,5 @@ export const ToDoAdd = ({handleNewToDo}) => {
 }
 
 ToDoAdd.propTypes = {
-  handleNewToDo: PropTypes.func.isRequired
+  onNewToDo: PropTypes.func.isRequired
 }
