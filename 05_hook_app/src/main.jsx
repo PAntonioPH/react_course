@@ -13,11 +13,11 @@ import './index.css'
 // import {HooksApp} from "./HooksApp.jsx";
 // import {CounterApp} from "./01_useState/CounterApp.jsx";
 // import {CounterAppCustomHook} from "./01_useState/CounterAppCustomHook.jsx";
+// import "./08_useReducer/intro_reducer"
+import {ToDoApp} from "./08_useReducer/ToDoApp.jsx";
 
-import "./08_useReducer/intro_reducer"
-
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   // <React.StrictMode>
-//   <Padre/>
-//   // </React.StrictMode>,
-// )
+ReactDOM.createRoot(document.getElementById('root')).render(
+  // <React.StrictMode>
+  <ToDoApp/>
+  // </React.StrictMode>,
+)
