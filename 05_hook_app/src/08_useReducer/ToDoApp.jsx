@@ -1,7 +1,5 @@
 import {useReducer} from "react";
-import {toDoReducer} from "./toDoReducer.js";
-import {ToDoList} from "./ToDoList.jsx";
-import {ToDoAdd} from "./ToDoAdd.jsx";
+import {ToDoAdd, ToDoList, toDoReducer} from "./index"
 
 const initialState = [
   {

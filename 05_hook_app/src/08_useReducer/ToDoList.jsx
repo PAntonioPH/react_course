@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {ToDoItem} from "./ToDoItem.jsx";
+import {ToDoItem} from "./index"
 
 export const ToDoList = ({toDos}) => {
   console.log(toDos);

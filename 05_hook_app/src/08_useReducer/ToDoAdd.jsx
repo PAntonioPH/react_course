@@ -1,26 +1,24 @@
-import {useState} from "react";
 import PropTypes from "prop-types";
+import {useForm} from "../hooks/index.js";
 
 export const ToDoAdd = ({handleNewToDo}) => {
-  const [inputValue, setInputValue] = useState("")
+  const {onInputChange, onResetForm, description} = useForm({
+    description: ""
+  })
 
   const onSubmit = (event) => {
     event.preventDefault()
 
-    if (inputValue.trim().length === 0) return
+    if (description.trim().length === 0) return
 
     handleNewToDo({
       id: new Date().getTime(),
-      description: inputValue,
+      description: description,
       done: false
     })
 
-    setInputValue("")
+    onResetForm()
   };
-
-  const onInputChangue = ({target}) => {
-    setInputValue(target.value)
-  }
 
   return (
     <form onSubmit={onSubmit}>
@@ -28,8 +26,9 @@ export const ToDoAdd = ({handleNewToDo}) => {
         type={"text"}
         placeholder={"¿Qué hay que hacer?"}
         className={"form-control"}
-        value={inputValue}
-        onChange={onInputChangue}
+        value={description}
+        name={"description"}
+        onChange={onInputChange}
       />
 
       <button
