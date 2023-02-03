@@ -14,10 +14,14 @@ import './index.css'
 // import {CounterApp} from "./01_useState/CounterApp.jsx";
 // import {CounterAppCustomHook} from "./01_useState/CounterAppCustomHook.jsx";
 // import "./08_useReducer/intro_reducer"
-import {ToDoApp} from "./08_useReducer/ToDoApp.jsx";
+// import {ToDoApp} from "./08_useReducer/ToDoApp.jsx";
+import {MainApp} from "./09_useContext/MainApp.jsx";
+import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  <ToDoApp/>
-  // </React.StrictMode>,
+  <BrowserRouter>
+    {/*<React.StrictMode>*/}
+    <MainApp/>
+    {/*</React.StrictMode>,*/}
+  </BrowserRouter>
 )
